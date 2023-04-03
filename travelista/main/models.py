@@ -11,3 +11,8 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.subject
+    
+    class Meta:
+        ordering = ['-created_date']
+        verbose_name = 'Contact'
+        verbose_name_plural = 'Contacts'
