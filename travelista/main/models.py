@@ -15,4 +15,4 @@ class Contact(models.Model):
     class Meta:
         ordering = ['-created_date']
         verbose_name = 'Contact'
-        verbose_name_plural = 'Contacts'
+        verbose_name_plural = 'Contacts '
