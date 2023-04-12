@@ -1,12 +1,23 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
+class Category(models.Model):
+    name = models.CharField(max_length=255)
+    
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
 class Post(models.Model):
-    #author = models.CharField(max_length=255)
-    #image
+    author = models.ForeignKey(User, on_delete= models.SET_NULL, null=True)
+    image = models.ImageField(upload_to='blog/', default= 'blog/default.jpg')
     title = models.CharField(max_length=255)
     content = models.TextField()
-    #category
+    category = models.ManyToManyField(Category)
     #tag
     counted_view = models.IntegerField(default=0)
     status = models.BooleanField()
@@ -20,4 +31,4 @@ class Post(models.Model):
     class Meta:
         ordering = ['-created_date']
         verbose_name = 'Post'
-        verbose_name_plural = 'Posts '
+        verbose_name_plural = 'Posts'
