@@ -5,7 +5,7 @@ from datetime import datetime
 # Create your views here.
 def blog_index_view(request):
     posts = Post.objects.filter(status=1, publish_date__lte=datetime.now())
-    context = {'posts': posts};
+    context = {'posts': posts}
     return render(request, 'blog/blog-index.html', context)
 
 def blog_single_view(request, pid):
