@@ -4494,3 +4494,41 @@ body.mobile-nav-active #mobile-nav-toggle {
 .footer-text a, .footer-text i {
   color: #f8b600;
 }
+
+.footer-padding-bottom {
+  padding-bottom: 5px;
+}
+
+.post-content-area .single-post .allign-left{
+  text-align: left;
+}
+
+.allign-justify{
+  text-align: justify;
+}
+
+.blog-index-post-tags li{
+  display: inline-block;
+  border: 1px solid #eee;
+  padding: 4px 12px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.blog-index-post-tags a{
+  font-weight: 400;
+  font-size: 12px;
+  color: #222;
+}
+
+.blog-index-post-tags li:hover{
+background-color: #f8b600;
+}
+
+.blog-index-post-tags li:hover a{
+  font-weight: 400;
+  font-size: 12px;
+  color: #ffffff;
+}
