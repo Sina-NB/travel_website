@@ -223,13 +223,13 @@
 			<div class="col-lg-4 sidebar-widgets">
 				<div class="widget-wrap">
 					{% include 'blog/include/side-bar/search.html' %}
+					{% include 'blog/include/side-bar/banner.html' %}
 					{% include 'blog/include/side-bar/author.html' with author=post.author %}
 					{% latest_posts num_posts=6 %}
 					{% include 'blog/include/side-bar/banner.html' %}
 					{% include 'blog/include/side-bar/banner.html' %}
 					{% include 'blog/include/side-bar/categories.html' %}
 					{% include 'blog/include/side-bar/banner.html' %}
-					{% include 'blog/include/side-bar/tags.html' %}
 				</div>
 			</div>
 		</div>
