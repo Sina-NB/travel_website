@@ -15,3 +15,8 @@ def blog_single_view(request, pid):
         post.save()
     context = {'post': post}
     return render(request, 'blog/blog-single.html', context)
+
+def blog_category_view(request, category_name):
+    posts = Post.objects.filter(status=1, publish_date__lte=datetime.now(), category__name=category_name)
+    context = {'posts': posts}
+    return render(request, 'blog/blog-index.html', context)

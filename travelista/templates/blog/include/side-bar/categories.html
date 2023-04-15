@@ -6,7 +6,7 @@
 
         {% for cat in categories %}
             <li>
-                <a href="#" class="d-flex justify-content-between">
+                <a href="{% url 'blog:category_search' category_name=cat.name %}" class="d-flex justify-content-between">
                     <p>{{cat.name}}</p>
                     <p>{{cat.number_of_posts}}</p>
                 </a>
