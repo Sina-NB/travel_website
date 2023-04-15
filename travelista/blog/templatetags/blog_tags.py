@@ -16,6 +16,6 @@ def latest_posts(num_posts=4):
 @register.inclusion_tag('blog/include/side-bar/categories.html')
 def categories():
     cat_count_sorted = Category.objects.annotate(
-        number_of_posts=Count("post")).order_by('-number_of_posts')
+        number_of_posts=Count("post")).order_by('name')
 
     return {'categories': cat_count_sorted}
